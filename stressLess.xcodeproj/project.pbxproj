@@ -16,6 +16,7 @@
 		235E86A12679343F0075E6FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 235E869F2679343F0075E6FD /* LaunchScreen.storyboard */; };
 		235E86AC2679343F0075E6FD /* stressLessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235E86AB2679343F0075E6FD /* stressLessTests.swift */; };
 		235E86B7267934400075E6FD /* stressLessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235E86B6267934400075E6FD /* stressLessUITests.swift */; };
+		235E86C52679389E0075E6FD /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235E86C42679389E0075E6FD /* ViewController2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		235E86B2267934400075E6FD /* stressLessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = stressLessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		235E86B6267934400075E6FD /* stressLessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stressLessUITests.swift; sourceTree = "<group>"; };
 		235E86B8267934400075E6FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		235E86C42679389E0075E6FD /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				235E869F2679343F0075E6FD /* LaunchScreen.storyboard */,
 				235E86A22679343F0075E6FD /* Info.plist */,
 				235E869A267934390075E6FD /* stressLess.xcdatamodeld */,
+				235E86C42679389E0075E6FD /* ViewController2.swift */,
 			);
 			path = stressLess;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				235E86C52679389E0075E6FD /* ViewController2.swift in Sources */,
 				235E8696267934390075E6FD /* ViewController.swift in Sources */,
 				235E8692267934390075E6FD /* AppDelegate.swift in Sources */,
 				235E869C267934390075E6FD /* stressLess.xcdatamodeld in Sources */,
