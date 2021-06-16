@@ -14,7 +14,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="stressLess" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7y-gh-h0a">
@@ -25,6 +25,10 @@
                                 <state key="normal" title="Start" backgroundImage="cloud" catalog="system">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YDm-Xm-btX"/>
+                                    <segue destination="jzf-hu-jMJ" kind="show" id="TnU-Zv-UNm"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stress Less" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uy-cq-NF8">
                                 <rect key="frame" x="44" y="73" width="311" height="81"/>
@@ -43,6 +47,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.94457894912422435" green="1" blue="0.99881702948405804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="IAx-xR-J0K"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -53,7 +58,7 @@
             <objects>
                 <viewController id="jzf-hu-jMJ" customClass="ViewController2" customModule="stressLess" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8hm-qB-rbm">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="et0-W9-YAT">
@@ -64,6 +69,9 @@
                                 <state key="normal" title="How are you feeling today?">
                                     <color key="titleColor" red="0.66799938410000004" green="0.88992105060000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="moodButton:" destination="jzf-hu-jMJ" eventType="touchUpInside" id="BGT-Vd-x4t"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stress Less" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xx5-ra-ONy">
                                 <rect key="frame" x="60" y="72" width="311" height="81"/>
@@ -79,70 +87,106 @@
                                     <color key="titleColor" red="0.77247222920000003" green="0.644941078" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="home:" destination="jzf-hu-jMJ" eventType="touchUpInside" id="qEY-hs-3CI"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="XFn-ev-zjS"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Iv-gB-pVa">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Iv-gB-pVa">
                                 <rect key="frame" x="45" y="629.5" width="50" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="1" green="0.92373109099184425" blue="0.62856751202237438" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal">
                                     <imageReference key="backgroundImage" image="circle.fill" catalog="system" symbolScale="default" renderingMode="template"/>
                                 </state>
+                                <connections>
+                                    <action selector="yellow:" destination="jzf-hu-jMJ" eventType="touchUpInside" id="boG-Pm-KRv"/>
+                                    <segue destination="Poz-Gz-X4i" kind="show" id="tyX-Nz-fdq"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NuA-ea-HDi">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NuA-ea-HDi">
                                 <rect key="frame" x="137" y="731.5" width="50" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.52326903390588986" green="0.89003203087246296" blue="0.49144613952383898" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal">
                                     <imageReference key="backgroundImage" image="circle.fill" catalog="system" symbolScale="default" renderingMode="template"/>
                                 </state>
+                                <connections>
+                                    <action selector="green:" destination="jzf-hu-jMJ" eventType="touchUpInside" id="gfi-yL-qFp"/>
+                                    <segue destination="Poz-Gz-X4i" kind="show" id="HO3-E0-Pfi"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSt-qS-pxL">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSt-qS-pxL">
                                 <rect key="frame" x="223" y="731.5" width="50" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.60801450664813628" green="0.5352270826612282" blue="0.89003203087246296" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal">
                                     <imageReference key="backgroundImage" image="circle.fill" catalog="system" symbolScale="default" renderingMode="template"/>
                                 </state>
+                                <connections>
+                                    <action selector="purple:" destination="jzf-hu-jMJ" eventType="touchUpInside" id="Sv1-Wf-77h"/>
+                                    <segue destination="Poz-Gz-X4i" kind="show" id="qW0-WV-cKw"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QnW-n2-Gur">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QnW-n2-Gur">
                                 <rect key="frame" x="223" y="629.5" width="50" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.70645687443924743" green="0.9634177588741375" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal">
                                     <imageReference key="backgroundImage" image="circle.fill" catalog="system" symbolScale="default" renderingMode="template"/>
                                 </state>
+                                <connections>
+                                    <action selector="blue:" destination="jzf-hu-jMJ" eventType="touchUpInside" id="zP2-iH-7oq"/>
+                                    <segue destination="Poz-Gz-X4i" kind="show" id="esr-3Q-nNZ"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQ5-R3-e4e">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQ5-R3-e4e">
                                 <rect key="frame" x="45" y="731.5" width="50" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.67397249261784575" green="0.70474738681439275" blue="0.66582417837898367" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal">
                                     <imageReference key="backgroundImage" image="circle.fill" catalog="system" symbolScale="default" renderingMode="template"/>
                                 </state>
+                                <connections>
+                                    <action selector="gray:" destination="jzf-hu-jMJ" eventType="touchUpInside" id="gbG-qP-as1"/>
+                                    <segue destination="Poz-Gz-X4i" kind="show" id="yBY-O2-w2N"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWy-el-k1b">
+                            <button hidden="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWy-el-k1b">
                                 <rect key="frame" x="318" y="629.5" width="50" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.95218935496230628" green="0.76382790938524092" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal">
                                     <imageReference key="backgroundImage" image="circle.fill" catalog="system" symbolScale="default" renderingMode="template"/>
                                 </state>
+                                <connections>
+                                    <action selector="pink:" destination="jzf-hu-jMJ" eventType="touchUpInside" id="7ZM-uB-ymx"/>
+                                    <segue destination="Poz-Gz-X4i" kind="show" id="9to-9T-JBR"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0C7-ZG-RP3">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0C7-ZG-RP3">
                                 <rect key="frame" x="318" y="731.5" width="50" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.89003203087246296" green="0.38923909163370302" blue="0.38110499719241087" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal">
                                     <imageReference key="backgroundImage" image="circle.fill" catalog="system" symbolScale="default" renderingMode="template"/>
                                 </state>
+                                <connections>
+                                    <action selector="red:" destination="jzf-hu-jMJ" eventType="touchUpInside" id="QrV-3p-FfM"/>
+                                    <segue destination="Poz-Gz-X4i" kind="show" id="Ttj-03-fhB"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B8l-W1-AYG">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B8l-W1-AYG">
                                 <rect key="frame" x="137" y="629.5" width="50" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="1" green="0.72140984541352349" blue="0.48944260152778774" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal">
                                     <imageReference key="backgroundImage" image="circle.fill" catalog="system" symbolScale="default" renderingMode="template"/>
                                 </state>
+                                <connections>
+                                    <action selector="orange:" destination="jzf-hu-jMJ" eventType="touchUpInside" id="7va-FC-FgT"/>
+                                    <segue destination="Poz-Gz-X4i" kind="show" id="0Kl-Vz-9SE"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Streak: ____ Days!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ES8-Gw-sGQ">
                                 <rect key="frame" x="116" y="256" width="182" height="27"/>
@@ -156,17 +200,27 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="qUR-kc-e9z"/>
+                    <connections>
+                        <outlet property="blueOutlet" destination="QnW-n2-Gur" id="0vX-ha-ZHg"/>
+                        <outlet property="grayOutlet" destination="SQ5-R3-e4e" id="4ki-S7-fcr"/>
+                        <outlet property="greenOutlet" destination="NuA-ea-HDi" id="kpa-wH-dzC"/>
+                        <outlet property="orangeOutlet" destination="B8l-W1-AYG" id="2KF-Ue-Uwy"/>
+                        <outlet property="pinkOutlet" destination="aWy-el-k1b" id="Gwe-Vk-gJe"/>
+                        <outlet property="purpleOutlet" destination="xSt-qS-pxL" id="aX0-9i-1eI"/>
+                        <outlet property="redOutlet" destination="0C7-ZG-RP3" id="fM3-22-WQg"/>
+                        <outlet property="yellowOutlet" destination="9Iv-gB-pVa" id="iGJ-ji-azM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rfq-sn-8dd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="702.89855072463774" y="75"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller3-->
         <scene sceneID="NSf-n1-iZX">
             <objects>
-                <viewController id="Poz-Gz-X4i" sceneMemberID="viewController">
+                <viewController id="Poz-Gz-X4i" customClass="ViewController3" customModule="stressLess" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E9G-LW-jTf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Journal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zif-uF-kkf">
@@ -175,16 +229,46 @@
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="57"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NTR-NE-9UY">
+                                <rect key="frame" x="28" y="50" width="41" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.48556099730000002" green="0.79410513630000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" backgroundImage="house" catalog="system">
+                                    <color key="titleColor" red="0.77247222920000003" green="0.644941078" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="home:" destination="jzf-hu-jMJ" eventType="touchUpInside" id="sTz-a9-eOu"/>
+                                    <action selector="homeTwo:" destination="Poz-Gz-X4i" eventType="touchUpInside" id="I6E-lB-J0H"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="pEm-fI-O0W"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="center" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I1i-AZ-Lqc">
+                                <rect key="frame" x="83" y="208" width="259" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3hr-jL-zJa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="I1i-AZ-Lqc"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="N4I-af-WEt"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VnE-cN-4PN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1335" y="75"/>
+            <point key="canvasLocation" x="1502.8985507246377" y="75"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="yBY-O2-w2N"/>
+        <segue reference="pEm-fI-O0W"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="circle.fill" catalog="system" width="128" height="121"/>
         <image name="cloud" catalog="system" width="128" height="87"/>

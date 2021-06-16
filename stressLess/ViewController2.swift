@@ -15,6 +15,71 @@ class ViewController2: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+   
+    
+    @IBAction func yellow(_ sender: UIButton) {
+    }
+    
+    @IBAction func orange(_ sender: UIButton) {
+    }
+    
+    @IBAction func blue(_ sender: UIButton) {
+    }
+    
+    @IBAction func pink(_ sender: UIButton) {
+    }
+    
+    @IBAction func gray(_ sender: UIButton) {
+    }
+    
+    @IBAction func green(_ sender: UIButton) {
+    }
+    
+    @IBAction func purple(_ sender: UIButton) {
+    }
+    
+    @IBAction func red(_ sender: UIButton) {
+    }
+
+    @IBOutlet weak var yellowOutlet: UIButton!
+    
+    @IBOutlet weak var orangeOutlet: UIButton!
+    
+    @IBOutlet weak var blueOutlet: UIButton!
+    
+    @IBOutlet weak var pinkOutlet: UIButton!
+    
+    @IBOutlet weak var grayOutlet: UIButton!
+    
+    @IBOutlet weak var greenOutlet: UIButton!
+    
+    @IBOutlet weak var purpleOutlet: UIButton!
+    
+    @IBOutlet weak var redOutlet: UIButton!
+    
+    @IBAction func home(_ sender: UIButton) {
+       }
+
+    @IBAction func moodButton(_ sender: UIButton) {
+        
+        yellowOutlet.isHidden = !yellowOutlet.isHidden
+        orangeOutlet.isHidden = !orangeOutlet.isHidden
+        blueOutlet.isHidden = !blueOutlet.isHidden
+        pinkOutlet.isHidden = !pinkOutlet.isHidden
+        grayOutlet.isHidden = !grayOutlet.isHidden
+        greenOutlet.isHidden = !greenOutlet.isHidden
+        purpleOutlet.isHidden = !purpleOutlet.isHidden
+        redOutlet.isHidden = !redOutlet.isHidden
+        
+        
+            /*{
+            if (self.moodButton) {
+                self.blue.hidden=NO;
+            }
+            */
+    }
+
+ 
     /*
     // MARK: - Navigation
 
