@@ -9,9 +9,14 @@ import UIKit
 
 class TableViewController4: UITableViewController {
 
+    var entries: [Entry] = []
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        entries = getEntries()
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -19,27 +24,40 @@ class TableViewController4: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
+    func getEntries() -> [Entry] {
+        let entryOne = Entry()
+        entryOne.text = "This is entry one"
+        
+        let entryTwo = Entry()
+        entryTwo.text = "This is entry two"
+        
+        return [entryOne, entryTwo]
+    }
+    
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return entries.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...
+        let entry = entries[indexPath.row]
+        cell.textLabel?.text = entry.text
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

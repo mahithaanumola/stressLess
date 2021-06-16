@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController3: UIViewController {
 
+    @IBOutlet weak var journalText: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,9 +21,27 @@ class ViewController3: UIViewController {
     }
     
     @IBAction func save(_ sender: UIButton) {
+        
+        let journalText 
+        
+        /*if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+
+            // we are creating a new ToDoCD object here, naming it toDo
+            
+            let text = EntryCD(entity: EntryCD.entity(), insertInto: context)
+            }
+        
+        if let text = journalText.text {
+            
+            entry.text = journalText
+            
+        }
+       try? context.save()
+                   navigationController?.popViewController(animated: true)
+        */
     }
     
-
+    
     /*
     // MARK: - Navigation
 
