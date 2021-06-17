@@ -15,6 +15,7 @@ class ViewController3: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     @IBAction func homeTwo(_ sender: UIButton) {
@@ -26,7 +27,9 @@ class ViewController3: UIViewController {
     
         if let journalText = journalText.text {
         
+            
             journalEntry.text = journalText
+            
             
         }
     
@@ -64,6 +67,7 @@ class ViewController3: UIViewController {
             
             logVc.journalVc = self
             
+            //logVc.journalEntry = journalEntry
         }
         
         // Get the new view controller using segue.destination.

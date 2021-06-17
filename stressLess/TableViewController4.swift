@@ -13,6 +13,7 @@ class TableViewController4: UITableViewController {
     
     var entries: [Entry] = []
     
+    var journalEntry = Entry()
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -15,7 +15,8 @@ class ViewController2: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-   
+    @IBOutlet weak var more: UITabBar!
+    
     
     @IBAction func yellow(_ sender: UIButton) {
     }

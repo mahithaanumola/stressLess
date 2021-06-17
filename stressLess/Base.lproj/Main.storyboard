@@ -252,13 +252,22 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4OO-aF-NEi">
-                                <rect key="frame" x="148" y="133" width="225" height="49"/>
+                                <rect key="frame" x="351" y="20" width="43" height="49"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.94509803920000002" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.0"/>
                                 <items>
-                                    <tabBarItem systemItem="favorites" id="5b2-hG-a5H"/>
-                                    <tabBarItem systemItem="more" id="Muv-cL-Hp8"/>
+                                    <tabBarItem systemItem="more" id="5b2-hG-a5H">
+                                        <inset key="imageInsets" minX="0.0" minY="3" maxX="0.0" maxY="0.0"/>
+                                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tabBarItem>
                                 </items>
+                                <color key="tintColor" red="0.94509803920000002" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.94509803920000002" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </tabBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5DB-yz-MuJ"/>
@@ -274,6 +283,7 @@
                         <outlet property="grayOutlet" destination="SQ5-R3-e4e" id="4ki-S7-fcr"/>
                         <outlet property="greenOutlet" destination="NuA-ea-HDi" id="kpa-wH-dzC"/>
                         <outlet property="happy" destination="nCU-PU-vaF" id="HdC-gW-8j9"/>
+                        <outlet property="more" destination="4OO-aF-NEi" id="Yru-XN-Tr9"/>
                         <outlet property="okay" destination="cvj-Cx-Sh4" id="hSm-Hl-DYA"/>
                         <outlet property="orangeOutlet" destination="B8l-W1-AYG" id="2KF-Ue-Uwy"/>
                         <outlet property="pinkOutlet" destination="aWy-el-k1b" id="Gwe-Vk-gJe"/>
@@ -334,7 +344,7 @@
                                 </state>
                                 <connections>
                                     <action selector="save:" destination="Poz-Gz-X4i" eventType="touchUpInside" id="hfA-Ra-kWS"/>
-                                    <segue destination="jwD-w0-12w" kind="show" id="9qp-A2-xas"/>
+                                    <segue destination="E9f-dz-S94" kind="show" id="9qp-A2-xas"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="center" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I1i-AZ-Lqc">
@@ -400,7 +410,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qQL-ti-Tuo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2282.608695652174" y="75"/>
+            <point key="canvasLocation" x="3192.753623188406" y="75"/>
         </scene>
         <!--View Controller5-->
         <scene sceneID="YYC-om-ILv">
@@ -462,12 +472,31 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i1s-zl-TSv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3095.6521739130435" y="75"/>
+            <point key="canvasLocation" x="4005.7971014492755" y="75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bIV-Cu-Kx5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="E9f-dz-S94" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="J3k-bW-Txo"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aND-Fr-CGz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jwD-w0-12w" kind="relationship" relationship="rootViewController" id="F0K-4Z-9nY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yjb-g5-lK7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2282.608695652174" y="75"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="yBY-O2-w2N"/>
-        <segue reference="pEm-fI-O0W"/>
+        <segue reference="XFn-ev-zjS"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="circle.fill" catalog="system" width="128" height="121"/>
