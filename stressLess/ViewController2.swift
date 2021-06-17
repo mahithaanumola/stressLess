@@ -121,5 +121,21 @@ class ViewController2: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+   /*
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let addVC = segue.destination as? ViewController3 {
+            addVC.previousVC = self
+          }
+        if let completeVC = segue.destination as? CompleteToDoViewController {
+            if let toDo = sender as? EntryCD {
+              completeVC.selectedToDo = toDo
+              completeVC.previousVC = self
+            }
+          }
+    }
+
+    
+    */
 
 }
