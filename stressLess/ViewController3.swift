@@ -22,7 +22,7 @@ class ViewController3: UIViewController {
     
     @IBAction func save(_ sender: UIButton) {
         
-        let journalText 
+       // let journalText
         
         /*if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
 

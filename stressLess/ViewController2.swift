@@ -40,6 +40,8 @@ class ViewController2: UIViewController {
     
     @IBAction func red(_ sender: UIButton) {
     }
+    
+    
 
     @IBOutlet weak var yellowOutlet: UIButton!
     
@@ -57,6 +59,26 @@ class ViewController2: UIViewController {
     
     @IBOutlet weak var redOutlet: UIButton!
     
+    
+    
+    @IBOutlet weak var energetic: UILabel!
+    
+    @IBOutlet weak var happy: UILabel!
+    
+    @IBOutlet weak var calm: UILabel!
+    
+    @IBOutlet weak var okay: UILabel!
+    
+    @IBOutlet weak var tired: UILabel!
+    
+    @IBOutlet weak var anxious: UILabel!
+    
+    @IBOutlet weak var sad: UILabel!
+    
+    @IBOutlet weak var frustrated: UILabel!
+    
+    
+    
     @IBAction func home(_ sender: UIButton) {
        }
 
@@ -70,6 +92,16 @@ class ViewController2: UIViewController {
         greenOutlet.isHidden = !greenOutlet.isHidden
         purpleOutlet.isHidden = !purpleOutlet.isHidden
         redOutlet.isHidden = !redOutlet.isHidden
+        
+        energetic.isHidden = !energetic.isHidden
+        happy.isHidden = !happy.isHidden
+        calm.isHidden = !calm.isHidden
+        okay.isHidden = !okay.isHidden
+        tired.isHidden = !tired.isHidden
+        anxious.isHidden = !anxious.isHidden
+        sad.isHidden = !sad.isHidden
+        frustrated.isHidden = !frustrated.isHidden
+        
         
         
             /*{
