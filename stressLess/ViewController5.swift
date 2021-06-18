@@ -11,10 +11,18 @@ class ViewController5: UIViewController {
 
     @IBOutlet weak var yogaVideo: UIWebView!
     
+    @IBOutlet weak var meditationVideo: UIWebView!
+    
+    @IBOutlet weak var musicVideo: UIWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loadYoutube(videoID: "mPYA6_rKdtU")
+        meditationYoutube(videoID: "e2BKaxsX88M")
+        calmingYoutube(videoID: "pxEj6m_7Qfk")
+    }
+    
+    @IBAction func home4(_ sender: UIButton) {
     }
     
     func loadYoutube(videoID:String) {
@@ -24,8 +32,23 @@ class ViewController5: UIViewController {
             yogaVideo.loadRequest( URLRequest(url: youtubeURL) )
         }
     
+    func meditationYoutube(videoID:String) {
+            guard
+                let youtubeURL = URL(string: "https://youtu.be/e2BKaxsX88M/embed/\(videoID)")
+                else { return }
+            meditationVideo.loadRequest( URLRequest(url: youtubeURL) )
+        }
     
-
+    func calmingYoutube(videoID:String) {
+            guard
+                let youtubeURL = URL(string: "https://youtu.be/pxEj6m_7Qfk/embed/\(videoID)")
+                else { return }
+            musicVideo.loadRequest( URLRequest(url: youtubeURL) )
+        }
+    
+    
+    
+   
     /*
     // MARK: - Navigation
 

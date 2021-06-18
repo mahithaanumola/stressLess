@@ -31,6 +31,9 @@ class TableViewController4: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
+    @IBAction func next(_ sender: UIButton) {
+    }
+    
     func getEntries() -> [Entry] {
         let entryOne = Entry()
         entryOne.words = "This is entry one"
@@ -39,7 +42,7 @@ class TableViewController4: UITableViewController {
         entryTwo.words = "This is entry two"
         
         let entryThree = Entry()
-        entryThree.words = "This is entry three"
+        entryThree.words = "Hi"
       //  entryThree.words = journalEntry.words
     
         
