@@ -74,7 +74,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stress Less" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xx5-ra-ONy">
-                                <rect key="frame" x="55" y="20" width="311" height="81"/>
+                                <rect key="frame" x="52" y="30" width="311" height="81"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="55"/>
                                 <nil key="highlightedColor"/>
@@ -251,29 +251,65 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4OO-aF-NEi">
-                                <rect key="frame" x="351" y="20" width="43" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" red="0.94509803920000002" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.0"/>
-                                <items>
-                                    <tabBarItem systemItem="more" id="5b2-hG-a5H">
-                                        <inset key="imageInsets" minX="0.0" minY="3" maxX="0.0" maxY="0.0"/>
-                                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </tabBarItem>
-                                </items>
-                                <color key="tintColor" red="0.94509803920000002" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="barTintColor" red="0.94509803920000002" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </tabBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7J-bj-rMI">
-                                <rect key="frame" x="305" y="142" width="46" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="g45-Wz-5qG">
+                                <rect key="frame" x="330" y="20" width="51" height="34"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p5b-PQ-Ll1">
+                                        <rect key="frame" x="15" y="0.0" width="21" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <color key="tintColor" red="0.34509803919999998" green="0.57647058819999997" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="line.horizontal.3" catalog="system">
+                                            <color key="titleColor" red="0.34509803919999998" green="0.57647058819999997" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="dropDown:" destination="jzf-hu-jMJ" eventType="touchUpInside" id="1Zm-QK-rHh"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7J-bj-rMI">
+                                        <rect key="frame" x="0.0" y="0.0" width="51" height="0.0"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Journal">
+                                            <color key="titleColor" red="0.34509803919999998" green="0.57647058819999997" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cityTapped:" destination="jzf-hu-jMJ" eventType="touchUpInside" id="zU2-Q0-bAI"/>
+                                            <segue destination="Poz-Gz-X4i" kind="show" id="o3w-Dk-eKG"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIC-4M-tbz">
+                                        <rect key="frame" x="0.0" y="0.0" width="51" height="0.0"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Entries">
+                                            <color key="titleColor" red="0.34509803919999998" green="0.57647058819999997" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cityTapped:" destination="jzf-hu-jMJ" eventType="touchUpInside" id="7XM-bY-Kh8"/>
+                                            <segue destination="jwD-w0-12w" kind="show" id="NBs-i9-mB8"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNN-of-QBF">
+                                        <rect key="frame" x="-6" y="0.0" width="63" height="0.0"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Self-care">
+                                            <color key="titleColor" red="0.34509803919999998" green="0.57647058819999997" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cityTapped:" destination="jzf-hu-jMJ" eventType="touchUpInside" id="qXU-hb-hfy"/>
+                                            <segue destination="KGT-A2-MfF" kind="show" id="1cp-nb-RRv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="a7J-bj-rMI" secondAttribute="trailing" id="6lx-Uk-Xt1"/>
+                                    <constraint firstAttribute="trailing" secondItem="aIC-4M-tbz" secondAttribute="trailing" id="SvE-kO-x8k"/>
+                                    <constraint firstItem="aIC-4M-tbz" firstAttribute="leading" secondItem="g45-Wz-5qG" secondAttribute="leading" id="Vsk-y3-sDz"/>
+                                    <constraint firstItem="a7J-bj-rMI" firstAttribute="leading" secondItem="g45-Wz-5qG" secondAttribute="leading" id="dXs-xb-MoA"/>
+                                </constraints>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rocks" translatesAutoresizingMaskIntoConstraints="NO" id="Jdb-aR-5dK">
+                                <rect key="frame" x="44" y="143" width="333" height="251"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5DB-yz-MuJ"/>
                         <color key="backgroundColor" red="0.94509803920000002" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -288,7 +324,6 @@
                         <outlet property="grayOutlet" destination="SQ5-R3-e4e" id="4ki-S7-fcr"/>
                         <outlet property="greenOutlet" destination="NuA-ea-HDi" id="kpa-wH-dzC"/>
                         <outlet property="happy" destination="nCU-PU-vaF" id="HdC-gW-8j9"/>
-                        <outlet property="more" destination="4OO-aF-NEi" id="Yru-XN-Tr9"/>
                         <outlet property="okay" destination="cvj-Cx-Sh4" id="hSm-Hl-DYA"/>
                         <outlet property="orangeOutlet" destination="B8l-W1-AYG" id="2KF-Ue-Uwy"/>
                         <outlet property="pinkOutlet" destination="aWy-el-k1b" id="Gwe-Vk-gJe"/>
@@ -297,6 +332,9 @@
                         <outlet property="sad" destination="IdY-lI-beY" id="oXO-WC-kdg"/>
                         <outlet property="tired" destination="VdW-Lz-EOe" id="aCm-Hl-DQH"/>
                         <outlet property="yellowOutlet" destination="9Iv-gB-pVa" id="iGJ-ji-azM"/>
+                        <outletCollection property="cityButtons" destination="a7J-bj-rMI" collectionClass="NSMutableArray" id="xOx-dF-SxC"/>
+                        <outletCollection property="cityButtons" destination="aIC-4M-tbz" collectionClass="NSMutableArray" id="muv-Lf-o9g"/>
+                        <outletCollection property="cityButtons" destination="tNN-of-QBF" collectionClass="NSMutableArray" id="qMZ-Nj-s85"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rfq-sn-8dd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -331,11 +369,10 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="pEm-fI-O0W"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="76n-Ms-WuP">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="*type here*" translatesAutoresizingMaskIntoConstraints="NO" id="76n-Ms-WuP">
                                 <rect key="frame" x="52" y="126" width="311" height="570"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -422,7 +459,7 @@
             <objects>
                 <viewController id="KGT-A2-MfF" customClass="ViewController5" customModule="stressLess" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CeZ-K1-u5b">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8UM-LN-e7Q">
@@ -471,6 +508,7 @@
                         <viewLayoutGuide key="safeArea" id="581-lI-Grp"/>
                         <color key="backgroundColor" red="0.94509803920000002" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Sfc-93-MvJ"/>
                     <connections>
                         <outlet property="yogaVideo" destination="Cq7-M8-CDp" id="ltq-g4-2Fw"/>
                     </connections>
@@ -500,13 +538,16 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="NBs-i9-mB8"/>
         <segue reference="yBY-O2-w2N"/>
-        <segue reference="kU9-Op-VQC"/>
+        <segue reference="XFn-ev-zjS"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="circle.fill" catalog="system" width="128" height="121"/>
         <image name="cloud" catalog="system" width="128" height="87"/>
         <image name="house" catalog="system" width="128" height="106"/>
+        <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
+        <image name="rocks" width="600" height="449"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

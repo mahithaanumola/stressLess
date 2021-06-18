@@ -9,14 +9,27 @@ import UIKit
 
 class ViewController2: UIViewController {
 
+    @IBOutlet var cityButtons: [UIButton]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-    @IBOutlet weak var more: UITabBar!
+    @IBAction func dropDown(_ sender: UIButton) {
+        cityButtons.forEach { (button) in
+            
+            UIView.animate(withDuration:0.3, animations: {
+                button.isHidden = !button.isHidden
+                self.view.layoutIfNeeded()
+            })
+           
+        }
+    }
     
+    @IBAction func cityTapped(_ sender: UIButton) {
+    }
     
     @IBAction func yellow(_ sender: UIButton) {
     }
