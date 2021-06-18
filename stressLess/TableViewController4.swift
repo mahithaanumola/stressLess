@@ -20,6 +20,10 @@ class TableViewController4: UITableViewController {
 
         entries = getEntries()
         
+        print(entries)
+        
+        print(journalEntry.words)
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -29,12 +33,17 @@ class TableViewController4: UITableViewController {
 
     func getEntries() -> [Entry] {
         let entryOne = Entry()
-        entryOne.text = "This is entry one"
+        entryOne.words = "This is entry one"
         
         let entryTwo = Entry()
-        entryTwo.text = "This is entry two"
+        entryTwo.words = "This is entry two"
         
-        return [entryOne, entryTwo]
+        let entryThree = Entry()
+        entryThree.words = "This is entry three"
+      //  entryThree.words = journalEntry.words
+    
+        
+        return [entryOne, entryTwo, entryThree]
     }
     
     
@@ -56,7 +65,7 @@ class TableViewController4: UITableViewController {
 
         // Configure the cell...
         let entry = entries[indexPath.row]
-        cell.textLabel?.text = entry.text
+        cell.textLabel?.text = entry.words
 
         return cell
     }

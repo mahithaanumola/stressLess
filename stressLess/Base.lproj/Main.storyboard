@@ -269,6 +269,11 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </tabBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7J-bj-rMI">
+                                <rect key="frame" x="305" y="142" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5DB-yz-MuJ"/>
                         <color key="backgroundColor" red="0.94509803920000002" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -496,7 +501,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="yBY-O2-w2N"/>
-        <segue reference="XFn-ev-zjS"/>
+        <segue reference="kU9-Op-VQC"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="circle.fill" catalog="system" width="128" height="121"/>

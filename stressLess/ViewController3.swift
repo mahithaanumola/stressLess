@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController3: UIViewController {
 
-    var logVc = TableViewController4()
+   // var logVc = TableViewController4()
     
     @IBOutlet weak var journalText: UITextView!
     
@@ -21,21 +21,24 @@ class ViewController3: UIViewController {
     @IBAction func homeTwo(_ sender: UIButton) {
     }
     
+    let journalEntry = Entry()
+    
     @IBAction func save(_ sender: UIButton) {
         
-        let journalEntry = Entry()
+        
     
-        if let journalText = journalText.text {
+        //if let journalText = journalText.text
+      //  {
         
             
-            journalEntry.text = journalText
+       // journalEntry.text = journalText.text
             
             
-        }
+     //   }
     
-        logVc.entries.append(journalEntry)
+     //  logVc.entries.append(journalEntry)
     
-        logVc.tableView.reloadData()
+     //   logVc.tableView.reloadData()
         
        /* if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
            
@@ -63,11 +66,16 @@ class ViewController3: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
+        journalEntry.words = journalText.text
+        
         if let logVc = segue.destination as? TableViewController4 {
             
-            logVc.journalVc = self
+            //logVc.journalVc = self
             
-            //logVc.journalEntry = journalEntry
+            logVc.journalEntry = journalEntry
+            
+            
+            
         }
         
         // Get the new view controller using segue.destination.

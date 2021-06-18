@@ -8,8 +8,8 @@
 import UIKit
 
 class Entry {
-    var date = Date()
-    var text = ""
+   // var date = Date()
+    var words = ""
 }
 
 
